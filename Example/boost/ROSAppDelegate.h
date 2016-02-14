@@ -1,0 +1,15 @@
+//
+//  ROSAppDelegate.h
+//  boost
+//
+//  Created by Furushchev on 02/14/2016.
+//  Copyright (c) 2016 Furushchev. All rights reserved.
+//
+
+@import UIKit;
+
+@interface ROSAppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
+
+@end
