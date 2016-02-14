@@ -1,6 +1,6 @@
 # boost
 
-[![CI Status](http://img.shields.io/travis/Furushchev/boost.svg?style=flat)](https://travis-ci.org/Furushchev/boost)
+[![Build Status](https://travis-ci.org/ros-ios/boost.svg?branch=master)](https://travis-ci.org/ros-ios/boost)
 [![Version](https://img.shields.io/cocoapods/v/boost.svg?style=flat)](http://cocoapods.org/pods/boost)
 [![License](https://img.shields.io/cocoapods/l/boost.svg?style=flat)](http://cocoapods.org/pods/boost)
 [![Platform](https://img.shields.io/cocoapods/p/boost.svg?style=flat)](http://cocoapods.org/pods/boost)
