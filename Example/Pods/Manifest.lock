@@ -1,5 +1,5 @@
 PODS:
-  - boost (0.1.0)
+  - boost (1.53.0)
 
 DEPENDENCIES:
   - boost (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  boost: c918700e935118051e8063873f9d0ad8d6126828
+  boost: 9f7076e464e2109eaab696e8a6c9764b0a5052a0
 
 COCOAPODS: 0.39.0

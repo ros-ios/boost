@@ -1,25 +1,29 @@
 {
   "name": "boost",
-  "version": "0.1.0",
-  "summary": "A short description of boost.",
-  "description": "",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/boost",
-  "license": "MIT",
+  "version": "1.53.0",
+  "summary": "Pre-built Boost C++ Library for ROSiOS",
+  "description": "Pre-built Boost C++ Library for ROSiOS",
+  "homepage": "https://github.com/ros-ios/boost",
+  "license": "Boost",
   "authors": {
     "Furushchev": "furushchev@jsk.imi.i.u-tokyo.ac.jp"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/boost.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/ros-ios/boost.git",
+    "tag": "1.53.0"
   },
   "platforms": {
     "ios": "7.0"
   },
   "requires_arc": true,
-  "source_files": "Pod/Classes/**/*",
-  "resource_bundles": {
-    "boost": [
-      "Pod/Assets/*.png"
-    ]
+  "ios": {
+    "source_files": "Pod/include/**/*.{h,hpp,ipp}",
+    "header_mappings_dir": "Pod/include",
+    "public_header_files": "Pod/include/**/*.{h,hpp,ipp}",
+    "preserve_paths": [
+      "Pod/include/**/*.{h,hpp,ipp}",
+      "Pod/lib/libboost.a"
+    ],
+    "vendored_libraries": "Pod/lib/libboost.a"
   }
 }

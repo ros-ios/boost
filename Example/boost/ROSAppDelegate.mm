@@ -1,5 +1,5 @@
 //
-//  ROSAppDelegate.m
+//  ROSAppDelegate.mm
 //  boost
 //
 //  Created by Furushchev on 02/14/2016.
@@ -8,11 +8,33 @@
 
 #import "ROSAppDelegate.h"
 
+#include <boost/regex.hpp>
+#include <iostream>
+#include <sstream>
+#include <string>
+
+
 @implementation ROSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    NSArray *body = @[@"To: George Shmidlapn",
+                      @"From: Rita Marlowe",
+                      @"Subject: Will Success Spoil Rock Hunter?",
+                      @"---",
+                      @"See subject."];
+    std::string bodystr = [[body componentsJoinedByString:@"\n"] UTF8String];
+    std::istringstream ss(bodystr);
+    boost::regex pat("^Subject: (RE: |Aw: )*(.*)");
+    std::string line;
+    while (!ss.eof()) {
+        std::getline(ss, line);
+        boost::smatch matches;
+        if (boost::regex_match(line, matches, pat)) {
+            std::cout << matches[2] << std::endl;
+        }
+    }
+    
     return YES;
 }
 
