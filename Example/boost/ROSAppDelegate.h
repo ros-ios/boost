@@ -10,6 +10,8 @@
 
 @interface ROSAppDelegate : UIResponder <UIApplicationDelegate>
 
++ (NSString *)testBoostFunction;
+
 @property (strong, nonatomic) UIWindow *window;
 
 @end

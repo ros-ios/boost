@@ -16,7 +16,7 @@
 
 @implementation ROSAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
++ (NSString *)testBoostFunction
 {
     NSArray *body = @[@"To: George Shmidlapn",
                       @"From: Rita Marlowe",
@@ -27,14 +27,21 @@
     std::istringstream ss(bodystr);
     boost::regex pat("^Subject: (RE: |Aw: )*(.*)");
     std::string line;
+    std::string firstMatched;
     while (!ss.eof()) {
         std::getline(ss, line);
         boost::smatch matches;
         if (boost::regex_match(line, matches, pat)) {
             std::cout << matches[2] << std::endl;
+            firstMatched = matches[2];
         }
     }
-    
+    return [NSString stringWithUTF8String:firstMatched.c_str()];;
+}
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    [ROSAppDelegate testBoostFunction];
     return YES;
 }
 

@@ -6,7 +6,8 @@
 //  Copyright (c) 2016 Furushchev. All rights reserved.
 //
 
-@import XCTest;
+#import <XCTest/XCTest.h>
+#import "ROSAppDelegate.h"
 
 @interface Tests : XCTestCase
 
@@ -26,9 +27,10 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testBoostFunction
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    NSString *str = [ROSAppDelegate testBoostFunction];
+    XCTAssertEqualObjects(str, @"Will Success Spoil Rock Hunter?");
 }
 
 @end
