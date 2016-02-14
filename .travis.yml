@@ -1,5 +1,5 @@
 language: objective-c
-cache: cocoapods
+# cache: cocoapods
 podfile: Example/Podfile
 xcode_workspace: Example/boost.xcworkspace
 xcode_scheme: boost-Example
