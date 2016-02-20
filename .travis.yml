@@ -10,7 +10,6 @@ env:
     - XCODE_SCHEME=boost-Example
   matrix:
     - TRAVIS_XCODE_DESTINATION='platform=iOS Simulator,name=iPhone 6s'
-    - TRAVIS_XCODE_DESTINATION='platform=iOS Simulator,name=iPhone 6'
     - TRAVIS_XCODE_DESTINATION='platform=iOS Simulator,name=iPhone 5'
 before_install:
   - brew update
